@@ -234,16 +234,16 @@ var createRuleEndPoints = function(row, column) {
 
       switch (rulesArray[x].dir2.position) {
         case 'north':
-          colStartRow = verifyValidCells(rulesArray[x].dir2.position, column, row, rulesArray[x].dir2.spaces);
+          colStartRow = verifyValidCells(rulesArray[x].dir2.position, colStartCol, row, rulesArray[x].dir2.spaces);
           break;
         case 'south':
-          colStartRow = verifyValidCells(rulesArray[x].dir2.position, column, row, rulesArray[x].dir2.spaces);
+          colStartRow = verifyValidCells(rulesArray[x].dir2.position, colStartCol, row, rulesArray[x].dir2.spaces);
           break;
         case 'east':
-          colStartCol = verifyValidCells(rulesArray[x].dir2.position, column, row, rulesArray[x].dir2.spaces);
+          colStartCol = verifyValidCells(rulesArray[x].dir2.position, column, colStartRow, rulesArray[x].dir2.spaces);
           break;
         case 'west':
-         colStartCol = verifyValidCells(rulesArray[x].dir2.position, column, row, rulesArray[x].dir2.spaces);
+         colStartCol = verifyValidCells(rulesArray[x].dir2.position, column, colStartRow, rulesArray[x].dir2.spaces);
           break;
 
       } 

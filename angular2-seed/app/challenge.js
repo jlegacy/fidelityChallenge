@@ -211,24 +211,16 @@ var createRuleEndPoints = function(row, column) {
       //calculate new position//
       switch (rulesArray[x].dir1.position) {
         case 'north':
-        
           colStartRow = verifyValidCells(rulesArray[x].dir1.position, column, row, rulesArray[x].dir1.spaces);
-        
           break;
         case 'south':
-         
           colStartRow = verifyValidCells(rulesArray[x].dir1.position, column, row, rulesArray[x].dir1.spaces);
-          
           break;
         case 'east':
           colStartCol = verifyValidCells(rulesArray[x].dir1.position, column, row, rulesArray[x].dir1.spaces);
-         
-          //    colStartCol = column + rulesArray[x].dir1.spaces;
           break;
         case 'west':
           colStartCol = verifyValidCells(rulesArray[x].dir1.position, column, row, rulesArray[x].dir1.spaces);
-        
-          //     colStartCol = column - rulesArray[x].dir1.spaces;
           break;
       }
 
@@ -252,7 +244,6 @@ var createRuleEndPoints = function(row, column) {
         if (typeof keyPad[colStartRow][colStartCol] !== 'undefined') {
 
           if (keyPad[colStartRow][colStartCol] > '') {
-            console.log(colStartRow, colStartCol);
             console.log('found', keyPad[colStartRow][colStartCol]);
           }
 
@@ -262,11 +253,9 @@ var createRuleEndPoints = function(row, column) {
   }
 }
 
-
 for (x in keyPad) {
   for (var z = 0; z < keyPad[x].length; z++) {
-    //  console.log(x,z);
-    if (parseInt(x) === 3 && z === 1) {
+    if (parseInt(x) === 2 && z === 3) {
       createRuleEndPoints(parseInt(x), z);
     }
 

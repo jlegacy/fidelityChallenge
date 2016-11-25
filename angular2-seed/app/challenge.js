@@ -221,6 +221,7 @@ var startChar = 'E';
 loadKeyPad();
 generateRules();
 generateEndPoints();
+
 for (x in iterations) {
   console.log('Generated ' + iterations[x] + ' sequences: ' + generateSequence(setSequenceStart(startChar), iterations[x]));
 }
